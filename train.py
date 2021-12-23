@@ -4,12 +4,13 @@ import torch.nn as nn
 from model import Model
 from argparse import *
 from data_prepare import *
+import os
 
 
 
 parser = ArgumentParser()
 parser.add_argument("--device", default="cpu", type=str)
-parser.add_argument("--data_path", type=str)
+parser.add_argument("--data_path",default="UTKFace", type=str)
 args = parser.parse_args()
 
 device = torch.device(args.device)
@@ -20,7 +21,9 @@ model.train(True)
 batch_size = 64
 epoch = 20
 lr = 0.001
-
+os.system("pip install gdown")
+os.system("gdown --id 0BxYys69jI14kYVM3aVhKS1VhRUk")
+os.system("tar -xf UTKFace.tar.gz")
 all_data = data_loader(args.data_path)
 
 torch.manual_seed(0)
