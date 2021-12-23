@@ -8,7 +8,7 @@ from argparse import *
 
 parser = ArgumentParser()
 parser.add_argument("--device", default="cpu", type=str)
-parser.add_argument("--data_path", type=str)
+parser.add_argument("--data_path",default="UTKFace", type=str)
 args = parser.parse_args()
 
 batch_size = 64
