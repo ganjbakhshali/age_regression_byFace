@@ -2,7 +2,7 @@ import torch
 import torchvision
 import torch.nn as nn
 from model import *
-
+import os
 from data_prepare import *
 from argparse import *
 
@@ -10,6 +10,9 @@ parser = ArgumentParser()
 parser.add_argument("--device", default="cpu", type=str)
 parser.add_argument("--data_path",default="UTKFace", type=str)
 args = parser.parse_args()
+
+
+os.system("gdown --id 1MSUTHE2yoYrW_S0rinbtDn_bVJnsWblK")#pretrain weights
 
 batch_size = 64
 epoch = 20
