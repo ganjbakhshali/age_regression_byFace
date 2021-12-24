@@ -12,8 +12,9 @@ parser.add_argument("--data_path",default="UTKFace", type=str)
 args = parser.parse_args()
 
 
-os.system("gdown --id 1MSUTHE2yoYrW_S0rinbtDn_bVJnsWblK")#pretrain weights
-
+# os.system("gdown --id 1MSUTHE2yoYrW_S0rinbtDn_bVJnsWblK")#pretrain weights
+# os.system("gdown --id 0BxYys69jI14kYVM3aVhKS1VhRUk")
+# os.system("tar -xf UTKFace.tar.gz")    #Data
 batch_size = 64
 epoch = 20
 lr = 0.001

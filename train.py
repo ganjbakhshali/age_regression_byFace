@@ -9,7 +9,7 @@ import os
 
 
 parser = ArgumentParser()
-parser.add_argument("--device", default="cpu", type=str)
+parser.add_argument("--device", default="cuda", type=str)
 parser.add_argument("--data_path",default="UTKFace", type=str)
 args = parser.parse_args()
 
@@ -21,7 +21,7 @@ model.train(True)
 batch_size = 64
 epoch = 20
 lr = 0.001
-os.system("pip install gdown")
+# os.system("pip install gdown")
 os.system("gdown --id 0BxYys69jI14kYVM3aVhKS1VhRUk")
 os.system("tar -xf UTKFace.tar.gz")
 all_data = data_loader(args.data_path)
